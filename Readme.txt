@@ -13,5 +13,5 @@ Dummy registration page
 2. Run `mvn clean package`
 
 ### Run Jetty embedded server ###
-1. Run the runner class Main.java
+1. Run the runner class Main.java in nl.rabobank.register package
 2. URL to the page: http://localhost:8000/register
