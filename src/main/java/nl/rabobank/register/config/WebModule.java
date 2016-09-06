@@ -14,11 +14,6 @@ import org.springframework.web.servlet.view.JstlView;
 @Configuration
 @ComponentScan(basePackages = {"nl.rabobank.register"})
 public class WebModule extends WebMvcConfigurerAdapter {
-//    @Override
-//    public void addViewControllers(ViewControllerRegistry aRegistry) {
-//        aRegistry.addViewController("/").setViewName("loginform");
-//        aRegistry.
-//    }
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry aRegistry) {
