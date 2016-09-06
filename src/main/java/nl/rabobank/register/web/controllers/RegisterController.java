@@ -1,5 +1,6 @@
 package nl.rabobank.register.web.controllers;
 
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -8,6 +9,7 @@ import java.util.logging.Logger;
 import nl.rabobank.register.web.model.User;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,18 +32,22 @@ public class RegisterController {
         User userForm = new User();
         model.put("userForm", userForm);
 
-        List<String> professionList = new ArrayList<String>();
-        professionList.add("Developer");
-        professionList.add("Designer");
-        professionList.add("IT Manager");
-        model.put("professionList", professionList);
+        fillProfessionList(model);
 
         LOGGER.exiting(CLAZZ, "viewRegistration");
         return "Registration";
     }
 
+    private void fillProfessionList(Map<String, Object> model) {
+        List<String> professionList = new ArrayList<String>();
+        professionList.add("Developer");
+        professionList.add("Designer");
+        professionList.add("IT Manager");
+        model.put("professionList", professionList);
+    }
+
     @RequestMapping(method = RequestMethod.POST)
-    public String processRegistration(@ModelAttribute("userForm") User user, BindingResult result) {
+    public String processRegistration(@Valid @ModelAttribute("userForm") User user, BindingResult result) {
         LOGGER.entering(CLAZZ,"processRegistration", user);
 
         if (result.hasFieldErrors()) {

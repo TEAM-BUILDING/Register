@@ -15,7 +15,7 @@ public class User {
     @NotEmpty
     @Email
     private String email;
-    @NotEmpty(message = "Please enter your birthday.")
+//    @NotEmpty(message = "Please enter your birthday.")
     private Date birthDate;
     @NotEmpty(message = "Please enter your profession.")
     private String profession;
