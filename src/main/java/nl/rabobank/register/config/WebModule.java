@@ -17,6 +17,7 @@ public class WebModule extends WebMvcConfigurerAdapter {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry aRegistry) {
+        aRegistry.addResourceHandler("/favicon.ico").addResourceLocations("classpath:/webapp/WEB-INF/view/favicon.ico*");
         aRegistry.addResourceHandler("/s/*").addResourceLocations("classpath:/webapp/WEB-INF/view/scripts/*");
         aRegistry.addResourceHandler("/c/*").addResourceLocations("classpath:/webapp/WEB-INF/view/css/*");
         aRegistry.addResourceHandler("/i/*").addResourceLocations("classpath:/webapp/WEB-INF/view/images/*");
