@@ -12,17 +12,12 @@ import org.springframework.web.servlet.view.JstlView;
 
 @EnableWebMvc
 @Configuration
-@ComponentScan(basePackages = {"nl.rabobank.register"})
+@ComponentScan(basePackages = { "nl.rabobank.register" })
 public class WebModule extends WebMvcConfigurerAdapter {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry aRegistry) {
-        aRegistry.addResourceHandler("/favicon.ico").addResourceLocations("classpath:/webapp/WEB-INF/view/favicon.ico*");
-        aRegistry.addResourceHandler("/s/*").addResourceLocations("classpath:/webapp/WEB-INF/view/scripts/*");
-        aRegistry.addResourceHandler("/c/*").addResourceLocations("classpath:/webapp/WEB-INF/view/css/*");
-        aRegistry.addResourceHandler("/i/*").addResourceLocations("classpath:/webapp/WEB-INF/view/images/*");
-        aRegistry.addResourceHandler("/WEB-INF/view/*").addResourceLocations(
-            "classpath:/webapp/WEB-INF/view/*");
+        aRegistry.addResourceHandler("/*").addResourceLocations("classpath:/webroot/META-INF/resources/");
 
     }
 
@@ -30,7 +25,7 @@ public class WebModule extends WebMvcConfigurerAdapter {
     public ViewResolver viewResolver() {
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
         viewResolver.setViewClass(JstlView.class);
-        viewResolver.setPrefix("/WEB-INF/view/jsp/");
+        viewResolver.setPrefix("/WEB-INF/jsp/");
         viewResolver.setSuffix(".jsp");
         return viewResolver;
     }

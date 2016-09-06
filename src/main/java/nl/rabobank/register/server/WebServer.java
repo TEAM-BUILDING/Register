@@ -81,7 +81,8 @@ public class WebServer {
     private HandlerCollection createHandlers() {
         WebAppContext _ctx = new WebAppContext();
         _ctx.setContextPath("/");
-        _ctx.setBaseResource(Resource.newClassPathResource("/webapp"));
+        _ctx.setBaseResource(Resource.newClassPathResource("/webroot/"));
+
 
         _ctx.setConfigurations(new Configuration[] { new AnnotationConfiguration() {
             @Override

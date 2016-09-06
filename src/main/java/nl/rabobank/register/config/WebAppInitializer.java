@@ -23,27 +23,27 @@ public class WebAppInitializer implements WebApplicationInitializer {
     }
 
     private void registerListener(ServletContext aContext) {
-        AnnotationConfigWebApplicationContext _root = createContext(ApplicationModule.class);
-        aContext.addListener(new ContextLoaderListener(_root));
+        AnnotationConfigWebApplicationContext root = createContext(ApplicationModule.class);
+        aContext.addListener(new ContextLoaderListener(root));
     }
 
     private void registerDispatcherServlet(ServletContext aContext) {
         AnnotationConfigWebApplicationContext _ctx = createContext(WebModule.class);
-        ServletRegistration.Dynamic _dispatcher =
+        ServletRegistration.Dynamic dispatcher =
                 aContext.addServlet(DISPATCHER_SERVLET_NAME, new DispatcherServlet(_ctx));
-        _dispatcher.setLoadOnStartup(1);
-        _dispatcher.addMapping("/");
+        dispatcher.setLoadOnStartup(1);
+        dispatcher.addMapping("/");
     }
 
     private void registerJspServlet(ServletContext aContext) {
-        ServletRegistration.Dynamic _dispatcher = aContext.addServlet(JSP_SERVLET_NAME, new JspServlet());
-        _dispatcher.setLoadOnStartup(1);
-        _dispatcher.addMapping("*.jsp");
+        ServletRegistration.Dynamic dispatcher = aContext.addServlet(JSP_SERVLET_NAME, new JspServlet());
+        dispatcher.setLoadOnStartup(1);
+        dispatcher.addMapping("*.jsp");
     }
 
     private AnnotationConfigWebApplicationContext createContext(final Class<?>... aModules) {
-        AnnotationConfigWebApplicationContext _ctx = new AnnotationConfigWebApplicationContext();
-        _ctx.register(aModules);
-        return _ctx;
+        AnnotationConfigWebApplicationContext ctx = new AnnotationConfigWebApplicationContext();
+        ctx.register(aModules);
+        return ctx;
     }
 }
