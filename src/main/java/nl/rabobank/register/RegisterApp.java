@@ -1,15 +1,18 @@
 package nl.rabobank.register;
 
-public class Main
+import nl.rabobank.register.server.WebServer;
+import nl.rabobank.register.server.WebServerConfig;
+
+public class RegisterApp
 {
     public static void main(String... anArgs) throws Exception
     {
-        new Main().start();
+        new RegisterApp().start();
     }
 
     private WebServer server;
 
-    public Main()
+    public RegisterApp()
     {
         server = new WebServer(
                 WebServerConfig.Factory.newDevelopmentConfig("happy", 8000, "localhost"));

@@ -73,7 +73,7 @@
               <transformers>
                 <transformer />
                 <transformer>
-                  <mainClass>nl.rabobank.register.Main</mainClass>
+                  <mainClass>nl.rabobank.register.RegisterApp</mainClass>
                 </transformer>
                 <transformer>
                   <resource>/spring.handlers</resource>

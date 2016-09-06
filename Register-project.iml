@@ -26,13 +26,13 @@
     <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-continuation:8.1.9.v20130131" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-http:8.1.9.v20130131" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-io:8.1.9.v20130131" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-util:8.1.9.v20130131" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-servlet:8.1.9.v20130131" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-security:8.1.9.v20130131" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-webapp:8.1.9.v20130131" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-xml:8.1.9.v20130131" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-servlets:8.1.9.v20130131" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-client:8.1.9.v20130131" level="project" />
-    <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-util:8.1.9.v20130131" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-annotations:8.1.9.v20130131" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-plus:8.1.9.v20130131" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.jetty.orbit:javax.transaction:1.1.1.v201105210645" level="project" />

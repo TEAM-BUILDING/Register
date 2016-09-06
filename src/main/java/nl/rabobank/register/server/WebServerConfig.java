@@ -1,4 +1,4 @@
-package nl.rabobank.register;
+package nl.rabobank.register.server;
 
 public interface WebServerConfig {
     public String getServerName();

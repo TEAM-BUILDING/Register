@@ -1,4 +1,4 @@
-package nl.rabobank.register;
+package nl.rabobank.register.server;
 
 import java.io.File;
 import java.io.IOException;
