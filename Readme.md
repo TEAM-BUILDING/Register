@@ -18,4 +18,8 @@ Dummy registration page
 
      java -Dorg.apache.jasper.compiler.disablejsr199=true -jar target\sign-up-project-1.0-SNAPSHOT.jar
 
+ or just run
+
+     run.bat
+
 2. URL to the page: [http://localhost:8000/register](http://localhost:8000/register)
