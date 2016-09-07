@@ -7,6 +7,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Registration Team Building</title>
+<link rel="stylesheet" type="text/css" href="css/error.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 	<div align="center">
