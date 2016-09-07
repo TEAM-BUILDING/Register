@@ -1,10 +1,12 @@
 package nl.rabobank.register.web.model;
 
-import java.util.Date;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.Date;
 
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.format.annotation.DateTimeFormat;
 
 public class User {
     @NotEmpty (message = "Please enter your username.")
@@ -15,7 +17,8 @@ public class User {
     @NotEmpty
     @Email
     private String email;
-//    @NotEmpty(message = "Please enter your birthday.")
+    @NotNull(message = "Please enter your birthday.")
+    @DateTimeFormat(pattern = "dd/MM/yyyy")
     private Date birthDate;
     @NotEmpty(message = "Please enter your profession.")
     private String profession;
